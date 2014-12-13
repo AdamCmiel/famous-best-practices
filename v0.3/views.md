@@ -16,26 +16,26 @@ buttons.
 
 To create this, the simplified scene graph would look something like:
 
-                                                        * Context
-                                                        |
-                                                        () App - in charge of laying out content and shuttling message
-                                                        |
-                                                        () headerFooterLayout 
-                                                       /|\
-                                                      / | \
-               Header () ----------------------------+  |  +-------------------------------() Footer
-                      |                                 |                                  |
-                HFL-x ()                                |                                  () SequentialLayout-x
-                     /|\                                |                                  |
-   Back Button RC   / | \  Settings RenderController    |                         { [], [], [], [] } Buttons
-          () ------+  |  +------()                      |
-          |           |         |                       |
-          []          []        []                      |
-   Back Button       Title    Settings Button           () Content
-                                                        |
-                                                        () ScrollView 
-                                                        |
-                                                { [], [], [], [] } Tweets
+                                                            * Context
+                                                            |
+                                                            () App - in charge of laying out content and shuttling message
+                                                            |
+                                                            () headerFooterLayout 
+                                                           /|\
+                                                          / | \
+                   Header () ----------------------------+  |  +-------------------------------() Footer
+                          |                                 |                                  |
+                    HFL-x ()                                |                                  () SequentialLayout-x
+                         /|\                                |                                  |
+       Back Button RC   / | \  Settings RenderController    |                         { [], [], [], [] } Buttons
+              () ------+  |  +------()                      |
+              |           |         |                       |
+              []          []        []                      |
+       Back Button       Title    Settings Button           () Content
+                                                            |
+                                                            () ScrollView 
+                                                            |
+                                                    { [], [], [], [] } Tweets
 
 User-defined Views: App, Header, Content, Footer
 User-defined Surfaces: BackButton, Title, SettingsButton, Tweet, FooterButton

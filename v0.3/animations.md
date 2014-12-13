@@ -67,13 +67,13 @@ Note that because require.js and browserify module loaders can export singleton 
 statements, one Transitionable could be the export of a data-source file that is then required into other source
 files. In that way several objects could implement some interaction based on the value of a transitionable singleton.
 
-dataSource.js
 ```js
-    module.exports = new Transitionable(0);
-```
+// dataSource.js
 
-foo.js
-```js
+    module.exports = new Transitionable(0);
+
+// foo.js
+
     var data = require('/path/to/dataSource');
     
     // read the value
